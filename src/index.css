@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0e0f12] text-slate-100 font-sans antialiased overflow-x-hidden;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(255, 205, 17, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(255, 205, 17, 0.03) 0%, transparent 40%),
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+  }
+}
+
+/* Custom industrial styling */
+.cat-pattern {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffcd11,
+    #ffcd11 12px,
+    #121214 12px,
+    #121214 24px
+  );
+}
+
+.cat-border-glow {
+  box-shadow: 0 0 15px rgba(255, 205, 17, 0.15);
+}
+
+.danger-glow {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.35);
+}
+
+.hud-panel {
+  background: linear-gradient(135deg, rgba(26, 27, 30, 0.92) 0%, rgba(18, 18, 20, 0.96) 100%);
+  border: 1px solid rgba(255, 205, 17, 0.15);
+  backdrop-filter: blur(12px);
+}
+
+.hud-panel-active {
+  background: linear-gradient(135deg, rgba(34, 36, 42, 0.95) 0%, rgba(20, 21, 24, 0.98) 100%);
+  border: 1px solid rgba(255, 205, 17, 0.45);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 205, 17, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121214;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #32363f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffcd11;
+}
